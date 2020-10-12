@@ -8,6 +8,9 @@ var currentPoint = 0;
 checkHighestScore();
 
 function jump() {
+    const audio = new Audio('sounds/jump.mp3');
+    audio.play();
+    
     if (character.classList != "animate") {
         character.classList.add("animate");
     }
