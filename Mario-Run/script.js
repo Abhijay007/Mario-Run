@@ -7,6 +7,12 @@ var currentPoint = 0;
 
 checkHighestScore();
 
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32 || e.keyCode == 38){
+        jump()
+    }
+}
+
 function jump() {
     const audio = new Audio('sounds/jump.mp3');
     audio.play();
@@ -36,7 +42,14 @@ var checkLost = setInterval(function () {
 
         block.style.animation = "none";
         block.style.display = "none";
-        alert("Your Lose -GameOver.");
+        alert("Your Lose - GameOver");
+        var newGame = confirm("Start new Game?");
+        if (newGame) {
+            location.reload();
+        }else{
+            character.style.animation = "none";
+            character.style.display = "none";
+        }
         clearInterval(incrementScore);
         checkNewRecord();
     }
