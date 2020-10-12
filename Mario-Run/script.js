@@ -7,11 +7,14 @@ var currentPoint = 0;
 
 checkHighestScore();
 
-document.body.onkeyup = function(e){
+function keysControl(e){
     if(e.keyCode == 32 || e.keyCode == 38){
         jump()
     }
 }
+
+document.body.addEventListener("keyup", keysControl);
+document.body.addEventListener("click", jump);
 
 function jump() {
     const audio = new Audio('sounds/jump.mp3');
@@ -49,6 +52,8 @@ var checkLost = setInterval(function () {
         }else{
             character.style.animation = "none";
             character.style.display = "none";
+            document.body.removeEventListener("keyup", keysControl);
+            document.body.removeEventListener("click", jump)
         }
         clearInterval(incrementScore);
         checkNewRecord();
