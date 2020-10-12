@@ -5,10 +5,10 @@
 
 #game{
     background-color:white;
-     width: 1360px;
      height: 350px;
      border: 1px solid black;   
      position: relative;
+     margin: 0;
 }
 
 #score-wrapper {
