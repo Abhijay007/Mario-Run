@@ -8,6 +8,25 @@
      width: 1360px;
      height: 350px;
      border: 1px solid black;   
+     position: relative;
+}
+
+#score-wrapper {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4px 8px;
+    font-size: 16px;
+}
+
+#highest-score {
+    justify-self: end;
+}
+
+#score {
+    justify-self: end;
 }
 
 #character{
