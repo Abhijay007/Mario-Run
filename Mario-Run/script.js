@@ -21,6 +21,8 @@ function jump() {
     }, 1000);
 }
 
+
+
 var incrementScore = setInterval(function () {
     currentPoint++;
     score.innerHTML = currentPoint;
@@ -33,10 +35,11 @@ var checkLost = setInterval(function () {
         parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
     if (blockLeft < 350 && blockLeft > 300 && characterTop >= 150) {
-
+        gameOver.style.display = "block";
+        character.style.display = "none";
         block.style.animation = "none";
         block.style.display = "none";
-        alert("Your Lose -GameOver.");
+        //alert("Your Lose -GameOver.");
         clearInterval(incrementScore);
         checkNewRecord();
     }
@@ -53,3 +56,4 @@ function checkNewRecord () {
         localStorage.setItem('mario-highest-score', currentPoint);
     }
 }
+

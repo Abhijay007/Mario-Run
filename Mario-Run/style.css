@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: monospace; 
 }
 
 #game{
@@ -9,6 +10,27 @@
      border: 1px solid black;   
      position: relative;
      margin: 0;
+}
+
+#gameOver {
+    background-color: lightgray;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: none;
+    color: #3f3f3f;
+    text-align: center;
+
+}
+#gameOver h1 {
+    padding: 0;
+    margin: 0;
+}
+
+#gameOver p {
+    padding-top: 10%;
+    font-size: medium;
+
 }
 
 #score-wrapper {
@@ -54,14 +76,12 @@
 }
 
 h1{
-    font-family: monospace;
     margin-top: 40px;
     margin-left: 50px;
     font-size: xx-large;
 }
 
 ul{
-    font-family: monospace; 
     margin-top: 3px;
     margin-left: 50px;
     font-size: xx-large;
