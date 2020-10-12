@@ -19,7 +19,7 @@
     display: grid;
     grid-template-columns: auto auto;
     gap: 4px 8px;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 #highest-score {
@@ -65,7 +65,7 @@ ul{
     font-family: monospace; 
     margin-top: 3px;
     margin-left: 50px;
-    font-size: xx-large;
+    font-size: 22px;
 }
 @keyframes jump{
    0%{top:200px;}
