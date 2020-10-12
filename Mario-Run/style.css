@@ -12,6 +12,27 @@
      margin: 0;
 }
 
+#gameOver {
+    background-color: lightgray;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: none;
+    color: #3f3f3f;
+    text-align: center;
+
+}
+#gameOver h1 {
+    padding: 0;
+    margin: 0;
+}
+
+#gameOver p {
+    padding-top: 10%;
+    font-size: medium;
+
+}
+
 #score-wrapper {
     position: absolute;
     right: 20px;

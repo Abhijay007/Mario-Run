@@ -42,10 +42,10 @@ var checkLost = setInterval(function () {
         parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
     if (blockLeft < 350 && blockLeft > 300 && characterTop >= 150) {
-
+        gameOver.style.display = "block";
+        character.style.display = "none";
         block.style.animation = "none";
         block.style.display = "none";
-        alert("Your Lose - GameOver");
         var newGame = confirm("Start new Game?");
         if (newGame) {
             location.reload();
