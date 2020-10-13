@@ -46,6 +46,7 @@ var checkLost = setInterval(function () {
         character.style.display = "none";
         block.style.animation = "none";
         block.style.display = "none";
+        alert("Your Lose - GameOver");
         var newGame = confirm("Start new Game?");
         if (newGame) {
             location.reload();
