@@ -1,15 +1,17 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: monospace;
 }
 
-#game{
-    background-color:white;
-     height: 350px;
+#game {
+    /* background-color:white; */
+    background-image: url(mario-background.jpg);
+     height: 450px; 
      border: 1px solid black;   
      position: relative;
      margin: 0;
+     background-repeat: repeat;
 }
 
 #score-wrapper {
@@ -30,50 +32,61 @@
     justify-self: end;
 }
 
-#character{
+#character {
     width: 120px;
     height: 150px;
     background-image: url("char.gif");
     position: relative;
-    top:200px;
+    top: 300px;
     left: 250px;
    
 }
 
-.animate{
+.animate {
     animation: jump 1s;
 }
 
-#block{
+#block {
     width: 50px;
     height: 45px;
     background-image:url("block.gif");
     position: relative;
-    top:155px;
+    top: 255px;
     left: 1200px;
     animation: block 3s infinite linear;
 }
 
-h1{
+h1 {
     font-family: monospace;
     margin-top: 40px;
     margin-left: 50px;
-    font-size: xx-large;
+    font-size: large;
 }
 
-ul{
+ul {
     font-family: monospace; 
     margin-top: 3px;
     margin-left: 50px;
-    font-size: 22px;
+    font-size: 15px;
 }
-@keyframes jump{
+
+@keyframes slideleft {
+    from { background-position: 0%; }
+    to { background-position: 90000%; }
+  }
+  
+  #game {
+    background-repeat: repeat-x;
+    animation: slideleft 6000s infinite linear;
+  }
+
+@keyframes jump {
    0%{top:200px;}
    50%{top:10px;}
    100%{top:200px;}
 }
 
-@keyframes block{
+@keyframes block {
      0%{left:1150px;}
      100%{left:50px;}
 }
